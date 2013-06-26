@@ -11,8 +11,7 @@
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="//use.typekit.net/gxy6fyl.js"></script>
-		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+		
 		
 		<?php wp_head(); ?>
 		
@@ -24,7 +23,7 @@
     <div id="main-container" class="container">
     <div class="row-fluid">
     
-   <div class="span3"> <a href="<?php bloginfo('url'); ?>"><img src="http://placehold.it/100x60$text=logo" alt="Logo" /></a></div>
+   <div class="span3"> <a href="<?php bloginfo('url'); ?>"><img src="http://placehold.it/150x90$text=logo" alt="Logo" /></a></div>
    <div class="span9"><?php wp_nav_menu( array('menu' => 'Top Menu', 'menu_class' => 'nav nav-pills pull-right', )); ?></div>
     
    </div>

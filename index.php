@@ -26,9 +26,15 @@
 
 	<div class="span4">
 	
-	<h4>This is a simple sidebar</h4>
-	
-	<p>This is a simple wordpress theme with twitter bootstrap. It contains nothing but the simplest loop</p>
+	<?php												
+	 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')) : //  Sidebar name
+	?>
+		
+		
+		
+		<?php
+		     endif;
+		?>
 	
 	</div>
 
