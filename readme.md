@@ -7,7 +7,7 @@ I will be adding a few more javascript fixes and some more wp tags for navigatio
 
 
 
-##header file includes
+###Header file includes
 * Bootstrap css and js plus responsive
 * Jquery js from google api
 * Menu
