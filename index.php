@@ -15,7 +15,9 @@
 		
 		<?php else : ?>
 		
-		// Content when no loop content found
+		<div class="alert alert-info">
+		  <strong>No content in this loop</strong>
+		</div>
 		
 		<?php endif; ?>
 	
