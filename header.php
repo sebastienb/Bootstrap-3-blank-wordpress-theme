@@ -6,7 +6,6 @@
 		<meta charset="utf8" />
 		
 		<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="<?php bloginfo('template_directory'); ?>/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
 		<link href="<?php bloginfo('stylesheet_url');?>" type="text/css" rel="stylesheet" media="screen, projection" />
 		<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css">
 		<script src="http://code.jquery.com/jquery.js"></script>

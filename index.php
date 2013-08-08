@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<div class="row-fluid">
+<div class="row">
 	
-	<div class="span8">
+	<div class="col-8">
 	
 		<?php if(have_posts()) : ?>
 		   <?php while(have_posts()) : the_post(); ?>
@@ -24,7 +24,7 @@
 	
 	</div>
 
-	<div class="span4">
+	<div class="col-4">
 	
 	<?php												
 	 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')) : //  Sidebar name
