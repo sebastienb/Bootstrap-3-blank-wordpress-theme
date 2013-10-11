@@ -20,10 +20,10 @@
   <body <?php body_class($class); ?>>
     
     <div id="main-container" class="container">
-    <div class="row-fluid">
+    <div class="row">
     
-   <div class="span3"> <a href="<?php bloginfo('url'); ?>"><img src="http://placehold.it/150x90$text=logo" alt="Logo" /></a></div>
-   <div class="span9"><?php wp_nav_menu( array('menu' => 'Top Menu', 'menu_class' => 'nav nav-pills pull-right', )); ?></div>
+   <div class="col-md-3"> <a href="<?php bloginfo('url'); ?>"><img src="http://placehold.it/150x90$text=logo" alt="Logo" /></a></div>
+   <div class="col-md-9"><?php wp_nav_menu( array('menu' => 'Top Menu', 'menu_class' => 'nav nav-pills pull-right', )); ?></div>
     
    </div>
     
