@@ -20,6 +20,8 @@ function form_submit_button($button, $form){
     return "<button class='button btn' id='gform_submit_button_{$form["id"]}'><span>Submit</span></button>";
 }
 
+
+// Register sidebar
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -29,6 +31,8 @@ if ( function_exists('register_sidebar') )
      ));
 
 
+
+// Bootstrap_Walker_Nav_Menu setup
 
 add_action( 'after_setup_theme', 'bootstrap_setup' );
  
