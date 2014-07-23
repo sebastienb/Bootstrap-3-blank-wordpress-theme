@@ -17,7 +17,7 @@ if ( function_exists( 'register_nav_menus' ) ) {
 // filter the Gravity Forms button type
 add_filter("gform_submit_button", "form_submit_button", 10, 2);
 function form_submit_button($button, $form){
-    return "<button class='button btn' id='gform_submit_button_{$form["id"]}'>'. $form["button"]["text"] .'</button>";
+    return "<button class='button btn' id='gform_submit_button_{$form["id"]}'><span>{$form['button']['text']}</span></button>";
 }
 
 // Register sidebar
