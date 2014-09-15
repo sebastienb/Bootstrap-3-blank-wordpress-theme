@@ -29,8 +29,6 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h4>',
      ));
 
-
-
 // Bootstrap_Walker_Nav_Menu setup
 
 add_action( 'after_setup_theme', 'bootstrap_setup' );
@@ -133,14 +131,8 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 				//end this element
 				$cb_args = array_merge( array(&$output, $element, $depth), $args);
 				call_user_func_array(array(&$this, 'end_el'), $cb_args);
-				
 			}
-			
 		}
- 
-	}
- 
+ 	}
 endif;
-
-
 ?>
