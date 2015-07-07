@@ -23,6 +23,7 @@ function form_submit_button($button, $form){
 // Register sidebar
 if ( function_exists('register_sidebar') )
     register_sidebar(array(
+    	'id' => 'sidebar-1',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h4>',
@@ -46,7 +47,7 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
 		class Bootstrap_Walker_Nav_Menu extends Walker_Nav_Menu {
  
 			
-			function start_lvl( &$output, $depth ) {
+			function start_lvl( &$output, $depth = 0, $args = array() ) {
  
 				$indent = str_repeat( "\t", $depth );
 				$output	   .= "\n$indent<ul class=\"dropdown-menu\">\n";
