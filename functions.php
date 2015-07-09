@@ -1,8 +1,15 @@
 <?php 
 
 
-//Add thumbnail support
+//Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'automatic-feed-links' );
+add_theme_support( "title-tag" );
+
+//Add content width (desktop default)
+if ( ! isset( $content_width ) ) {
+	$content_width = 768;
+}
 
 //Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
@@ -21,14 +28,18 @@ function form_submit_button($button, $form){
 }
 
 // Register sidebar
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-    	'id' => 'sidebar-1',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-     ));
+add_action("widgets_init", "theme_register_sidebar");
+function theme_register_sidebar() {
+	if ( function_exists('register_sidebar') ) {
+		register_sidebar(array(
+			'id' => 'sidebar-1',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h4>',
+		    'after_title' => '</h4>',
+		 ));
+	}
+}
 
 // Bootstrap_Walker_Nav_Menu setup
 
