@@ -1,8 +1,15 @@
 <?php 
 
 
-//Add thumbnail support
+//Add thumbnail, automatic feed links and title tag support
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'automatic-feed-links' );
+add_theme_support( "title-tag" );
+
+//Add content width (desktop default)
+if ( ! isset( $content_width ) ) {
+	$content_width = 768;
+}
 
 //Add menu support and register main menu
 if ( function_exists( 'register_nav_menus' ) ) {
