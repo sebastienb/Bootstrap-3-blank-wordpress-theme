@@ -21,14 +21,18 @@ function form_submit_button($button, $form){
 }
 
 // Register sidebar
-if ( function_exists('register_sidebar') )
-    register_sidebar(array(
-    	'id' => 'sidebar-1',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h4>',
-        'after_title' => '</h4>',
-     ));
+add_action("widgets_init", "theme_register_sidebar");
+function theme_register_sidebar() {
+	if ( function_exists('register_sidebar') ) {
+		register_sidebar(array(
+			'id' => 'sidebar-1',
+		    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		    'after_widget' => '</div>',
+		    'before_title' => '<h4>',
+		    'after_title' => '</h4>',
+		 ));
+	}
+}
 
 // Bootstrap_Walker_Nav_Menu setup
 
