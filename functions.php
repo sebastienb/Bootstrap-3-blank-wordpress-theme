@@ -67,6 +67,10 @@ if ( ! function_exists( 'bootstrap_setup' ) ):
  
 			function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
 				
+				if (!is_object($args)) {
+					return; // menu has not been configured
+				}
+
 				$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
  
 				$li_attributes = '';
