@@ -1,13 +1,13 @@
 <?php get_header(); ?>
 
 <div class="row">
-	
+
 	<div class="col-md-8">
-	
+
 		<?php if(have_posts()) : ?>
 		   <?php while(have_posts()) : the_post(); ?>
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h2><?php the_title(); ?></h2>			 
+				<?php the_title('<h2>','</h2>'); ?>
 		 		<?php the_content(); ?>
 			</div>
 			<?php
@@ -34,35 +34,29 @@
 			}
 			?>
 		   <?php endwhile; ?>
-		
+
 		<?php if (!is_singular()) : ?>
 			<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
 			<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 		<?php endif; ?>
 
 		<?php else : ?>
-		
+
 		<div class="alert alert-info">
 		  <strong>No content in this loop</strong>
 		</div>
-		
+
 		<?php endif; ?>
-	
-	
 	</div>
 
 	<div class="col-md-4">
-	
-	<?php												
-	 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')) : //  Sidebar name
-	?>
-		
-		
-		
+
+		<?php
+		 if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Sidebar')) : //  Sidebar name
+		?>
 		<?php
 		     endif;
 		?>
-	
 	</div>
 
 </div>
