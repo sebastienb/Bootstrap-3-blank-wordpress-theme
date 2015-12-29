@@ -262,76 +262,38 @@ function pu_register_settings()
     // Add LinkedIn field
     add_settings_field( 'linkedin_link', 'LinkedIn', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
 
-    // Add settings section
-    add_settings_section( 'about_us_section', 'About Us', 'pu_display_section', 'pu_theme_options.php' );
-
-
-    // Company Mission (who we are, what we do, how we do it)
-    // Create textarea field
     $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'who_we_are',
-      'name'      => 'who_we_are',
-      'desc'      => 'Who We Are',
+      'type'      => 'text',
+      'id'        => 'instagram_link',
+      'name'      => 'instagram_link',
+      'desc'      => 'Instagram Link - Example: http://instagram.com/username',
       'std'       => '',
-      'label_for' => 'who_we_are'
+      'label_for' => 'instagram_link',
+      'class'     => 'css_class'
     );
 
-    add_settings_field( 'who_we_are', 'Who We Are', 'pu_display_setting', 'pu_theme_options.php', 'about_us_section', $field_args );   
+    // Add Instagram field
+    add_settings_field( 'instagram_link', 'Instagram', 'pu_display_setting', 'pu_theme_options.php', 'pu_text_section', $field_args );
 
-    // Create textarea field
-    $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'what_we_do',
-      'name'      => 'what_we_do',
-      'desc'      => 'What We Do',
-      'std'       => '',
-      'label_for' => 'what_we_do'
-    );
-
-    add_settings_field( 'what_we_do', 'What We Do', 'pu_display_setting', 'pu_theme_options.php', 'about_us_section', $field_args );   
+    // Add settings section title here
+    add_settings_section( 'section_name_here', 'Section Title Here', 'pu_display_section', 'pu_theme_options.php' );
     
     // Create textarea field
     $field_args = array(
       'type'      => 'textarea',
-      'id'        => 'how_we_do_it',
-      'name'      => 'how_we_do_it',
-      'desc'      => 'How We Do It',
+      'id'        => 'settings_field_1',
+      'name'      => 'settings_field_1',
+      'desc'      => 'Setting Description Here',
       'std'       => '',
-      'label_for' => 'how_we_do_it'
+      'label_for' => 'settings_field_1'
     );
 
-    add_settings_field( 'how_we_do_it', 'How We Do It', 'pu_display_setting', 'pu_theme_options.php', 'about_us_section', $field_args );   
+    // section_name should be same as section_name above (line 116)
+    add_settings_field( 'settings_field_1', 'Setting Title Here', 'pu_display_setting', 'pu_theme_options.php', 'section_name_here', $field_args );   
 
 
-
-    // Company Vision and Mission
-    add_settings_section( 'vision_and_mission', 'Vision and Mission', 'pu_display_section', 'pu_theme_options.php' );
-
-    // Create textarea field
-    $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'vision',
-      'name'      => 'vision',
-      'desc'      => 'Vision',
-      'std'       => '',
-      'label_for' => 'vision'
-    );
-
-    add_settings_field( 'vision', 'Vision', 'pu_display_setting', 'pu_theme_options.php', 'vision_and_mission', $field_args );
-
-    // Create textarea field
-    $field_args = array(
-      'type'      => 'textarea',
-      'id'        => 'mission',
-      'name'      => 'mission',
-      'desc'      => 'Mission',
-      'std'       => '',
-      'label_for' => 'mission'
-    );
-
-    add_settings_field( 'mission', 'Mission', 'pu_display_setting', 'pu_theme_options.php', 'vision_and_mission', $field_args );
-
+    // Copy lines 118 through 129 to create additional field within that section
+    // Copy line 116 for a new section and then 118-129 to create a field in that section
 }
 
 
